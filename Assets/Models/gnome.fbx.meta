@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 159e8d80015b8fe4499a38c82722168b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface1
+    100002: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface10
+    100004: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface11
+    100006: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface12
+    100008: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface13
+    100010: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface9
+    100012: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:transform4
+    100014: baseHeadMesh:polySurface1
+    100016: baseHeadMesh:polySurface2
+    100018: baseHeadMesh:pSphere1
+    100020: Boot
+    100022: Boot1
+    100024: //RootNode
+    100026: group1
+    100028: hand:Mesh
+    100030: Hat
+    100032: Jacket
+    100034: pCube1
+    100036: pCube2
+    100038: pCylinder5
+    100040: polySurface1
+    100042: polySurface2
+    100044: polySurface26
+    100046: polySurface27
+    100048: polySurface28
+    100050: polySurface30
+    100052: thoung:Mesh
+    100054: transform1
+    100056: transform21
+    400000: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface1
+    400002: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface10
+    400004: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface11
+    400006: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface12
+    400008: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface13
+    400010: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface9
+    400012: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:transform4
+    400014: baseHeadMesh:polySurface1
+    400016: baseHeadMesh:polySurface2
+    400018: baseHeadMesh:pSphere1
+    400020: Boot
+    400022: Boot1
+    400024: //RootNode
+    400026: group1
+    400028: hand:Mesh
+    400030: Hat
+    400032: Jacket
+    400034: pCube1
+    400036: pCube2
+    400038: pCylinder5
+    400040: polySurface1
+    400042: polySurface2
+    400044: polySurface26
+    400046: polySurface27
+    400048: polySurface28
+    400050: polySurface30
+    400052: thoung:Mesh
+    400054: transform1
+    400056: transform21
+    2100000: blinn2
+    2100002: lambert5
+    2100004: lambert2
+    2100006: lambert3
+    2100008: lambert4
+    2100010: blinn1
+    2100012: lambert6
+    2100014: baseHeadMesh_baseHeadMesh_baseHeadMesh_baseHeadMesh_lambert1
+    2100016: lambert7
+    2100018: lambert8
+    2300000: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface1
+    2300002: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface10
+    2300004: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface11
+    2300006: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface12
+    2300008: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface13
+    2300010: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface9
+    2300012: baseHeadMesh:polySurface2
+    2300014: Boot
+    2300016: Boot1
+    2300018: Hat
+    2300020: pCube1
+    2300022: pCube2
+    2300024: pCylinder5
+    2300026: polySurface1
+    2300028: polySurface2
+    2300030: polySurface26
+    2300032: polySurface27
+    2300034: polySurface28
+    2300036: polySurface30
+    3300000: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface1
+    3300002: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface10
+    3300004: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface11
+    3300006: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface12
+    3300008: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface13
+    3300010: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface9
+    3300012: baseHeadMesh:polySurface2
+    3300014: Boot
+    3300016: Boot1
+    3300018: Hat
+    3300020: pCube1
+    3300022: pCube2
+    3300024: pCylinder5
+    3300026: polySurface1
+    3300028: polySurface2
+    3300030: polySurface26
+    3300032: polySurface27
+    3300034: polySurface28
+    3300036: polySurface30
+    4300000: Boot
+    4300002: Hat
+    4300004: pCylinder5
+    4300006: pCube1
+    4300008: pCube2
+    4300010: Boot1
+    4300012: polySurface1
+    4300014: polySurface2
+    4300016: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface11
+    4300018: baseHeadMesh:polySurface2
+    4300020: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface9
+    4300022: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface10
+    4300024: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface12
+    4300026: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface13
+    4300028: baseHeadMesh:baseHeadMesh:baseHeadMesh:baseHeadMesh:polySurface1
+    4300030: polySurface26
+    4300032: polySurface27
+    4300034: polySurface28
+    4300036: polySurface30
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 75
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PreScene.unity
+    guid: 185376cbe33c87840b06fed37b95827b
+  - enabled: 1
+    path: Assets/Scenes/Demo.unity
+    guid: 16c5c8ba65119ae4a96aa817e469429f
+  m_configObjects: {}
