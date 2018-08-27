@@ -63,7 +63,10 @@ public class SnapshotController : MonoBehaviour
             arStatus.text = latitude.ToString() + " " + longitude;
         }*/
 
-        uploadbtn.interactable = inputText.text != "";
+        if (!_isCamEnable)
+            uploadbtn.interactable = inputText.text != "";
+        else
+            uploadbtn.interactable = true;
 
         if (_camAvailable)
             return;
@@ -133,6 +136,7 @@ public class SnapshotController : MonoBehaviour
 
         SnapshotImage.texture = _photo;
 
+        TakeSnapshot.SetActive(false);
         Upload.SetActive(true);
     }
 
