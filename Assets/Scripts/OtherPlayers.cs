@@ -120,17 +120,31 @@ namespace Assets.Scripts
 			//Debug.Log(www.texture.width + " " + www.texture.height);
 			Canvas canvas = instance.GetComponentInChildren<Canvas>();
 			canvas.gameObject.SetActive(true);
-			
-			RawImage[] images = instance.GetComponentsInChildren<RawImage>();
-			foreach (RawImage image in images)
-			{
-				image.texture = www.texture;
-			}
-			AspectRatioFitter[] aspects = instance.GetComponentsInChildren<AspectRatioFitter>();
-			foreach (AspectRatioFitter aspect in aspects)
-			{
-				aspect.aspectRatio = (float)www.texture.width / www.texture.height;
-			}
+
+            if (imgUrl.EndsWith("jpg"))
+            {
+                RawImage[] images = instance.GetComponentsInChildren<RawImage>(true);
+                foreach (RawImage image in images)
+                {
+                    image.texture = www.texture;
+                    image.gameObject.SetActive(true);
+                }
+                AspectRatioFitter[] aspects = instance.GetComponentsInChildren<AspectRatioFitter>();
+                foreach (AspectRatioFitter aspect in aspects)
+                {
+                    aspect.aspectRatio = (float)www.texture.width / www.texture.height;
+                }
+            }
+            else
+            {
+                Image[] images = instance.GetComponentsInChildren<Image>(true);
+                foreach (var image in images)
+                {
+                    var text = image.GetComponentInChildren<Text>();
+                    text.text = www.text;
+                    image.gameObject.SetActive(true);
+                }
+            }
 			//var scale = (float) www.texture.width/www.texture.height;
 			//Debug.Log(scale);
 			Canvas[] canvases = instance.GetComponentsInChildren<Canvas>();

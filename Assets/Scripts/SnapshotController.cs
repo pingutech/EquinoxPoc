@@ -12,18 +12,24 @@ public class SnapshotController : MonoBehaviour
     public Camera arCamera;
 
     public GameObject EnableSnapshotCam;
+    public GameObject EnableTextSnapshot;
     public GameObject TakeSnapshot;
     public GameObject CancelCam;
     public GameObject Upload;
-
+    
+    public GameObject InputTextPanel;
+    private InputField inputText;
     public RawImage SnapshotImage;
     public AspectRatioFitter fit;
+    private Button uploadbtn;
+
 
     private WebCamTexture _webCamTexture;
     private Texture2D _photo;
 
+
     private bool _camAvailable;
-    private bool _uploaded;
+    private bool _isCamEnable;
 
     public Text arStatus;
 
@@ -42,6 +48,9 @@ public class SnapshotController : MonoBehaviour
         }
 
         _webCamTexture = new WebCamTexture(selectedDeviceName);
+
+        inputText = InputTextPanel.GetComponent<InputField>();
+        uploadbtn = Upload.GetComponent<Button>();
     }
 
     private void Update()
@@ -53,6 +62,8 @@ public class SnapshotController : MonoBehaviour
             var longitude = Input.location.lastData.longitude;
             arStatus.text = latitude.ToString() + " " + longitude;
         }*/
+
+        uploadbtn.interactable = inputText.text != "";
 
         if (_camAvailable)
             return;
@@ -67,35 +78,46 @@ public class SnapshotController : MonoBehaviour
         SnapshotImage.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
     }
 
-    public void StartCamera()
+    public void EnableCameraOrText(bool cameraEnable)
     {
-        LifecycleManager.Instance.DisableSession();
+        if(cameraEnable)
+        {
+            _isCamEnable = cameraEnable;
 
-        _webCamTexture.Play();
-        SnapshotImage.texture = _webCamTexture;
+            LifecycleManager.Instance.DisableSession();
 
-        SnapshotImage.gameObject.SetActive(true);
+            _webCamTexture.Play();
+            SnapshotImage.texture = _webCamTexture;
+
+            SnapshotImage.gameObject.SetActive(true);
+            TakeSnapshot.SetActive(true);
+        }
+        else
+        {
+            InputTextPanel.SetActive(true);
+            Upload.SetActive(true);
+        }
+
         EnableSnapshotCam.SetActive(false);
-        TakeSnapshot.SetActive(true);
+        EnableTextSnapshot.SetActive(false);
         CancelCam.SetActive(true);
     }
 
-    public void TakeSnapshotClick()
+    public void TakeCameraSnapshotClick()
     {
         StartCoroutine(TakeScreenshot());
     }
 
-    public void StopCamera()
+    public void CancelSnapshot()
     {
-        _webCamTexture.Stop();
+        if(_isCamEnable)
+        {
+            _webCamTexture.Stop();
 
-        SnapshotImage.gameObject.SetActive(false);
-        EnableSnapshotCam.SetActive(true);
-        TakeSnapshot.SetActive(false);
-        CancelCam.SetActive(false);
-        Upload.SetActive(false);
+            ResetCamera();
+        }
 
-        ResetCamera();
+        ResetButtons();
     }
 
     IEnumerator TakeScreenshot()
@@ -118,15 +140,30 @@ public class SnapshotController : MonoBehaviour
     {
         var latitude = GetLatitude();
         var longitude = GetLongitude();
-       UploadController.Upload(_photo, latitude, longitude);
+
+        if(_isCamEnable)
+        {
+            UploadController.Upload(_photo, null, latitude, longitude);
+            ResetCamera();
+        }
+        else
+            UploadController.Upload(null, inputText.text, latitude, longitude);
+
+        ResetButtons();
+    }
+
+    private void ResetButtons()
+    {
+        EnableSnapshotCam.SetActive(true);
+        EnableTextSnapshot.SetActive(true);
 
         SnapshotImage.gameObject.SetActive(false);
-        EnableSnapshotCam.SetActive(true);
+        InputTextPanel.SetActive(false);
         TakeSnapshot.SetActive(false);
         CancelCam.SetActive(false);
         Upload.SetActive(false);
 
-        ResetCamera();
+        _isCamEnable = false;
     }
 
     float GetLatitude()
