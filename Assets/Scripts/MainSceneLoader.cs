@@ -9,10 +9,11 @@ public class MainSceneLoader : MonoBehaviour
 
     private void Start()
     {
-        UniAndroidPermission.RequestPermission(AndroidPermission.ACCESS_FINE_LOCATION, AccessFineLocation, AccessFineLocation);
+        UniAndroidPermission.RequestPermission(AndroidPermission.ACCESS_FINE_LOCATION, AccessCamera, AccessCamera);
+        Invoke("AccessCamera", 0.5f);
     }
 
-    void AccessFineLocation()
+    void AccessCamera()
     {
         UniAndroidPermission.RequestPermission(AndroidPermission.CAMERA);
     }

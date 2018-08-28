@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Mapbox.Unity.Map;
 using Mapbox.Unity.Utilities;
 using Mapbox.Utils;
@@ -75,13 +76,25 @@ namespace Assets.Scripts
 
 		public void ResetMap()
 		{
+            return;
+
 			//Debug.Log("reseting map");
 			_changed = false;
-			//reseting zoom
-			_previousZoom = _mapManager.InitialZoom;
-			_mapManager.UpdateMap(_mapManager.CenterLatitudeLongitude, _previousZoom);
-			_mapManager.gameObject.transform.localScale = new Vector3(1,1,1);
+            //reseting zoom
+            //_previousZoom = _mapManager.InitialZoom;
+
+            StartCoroutine(ZoomReset());
 		}
+
+        IEnumerator ZoomReset()
+        {
+            _mapManager.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            yield return new WaitForSeconds(1f);
+
+            _mapManager.UpdateMap(_mapManager.CenterLatitudeLongitude, _previousZoom);
+
+            Debug.Log("resetirao sam");
+        }
 
 		public void Enable()
 		{
